@@ -1,49 +1,51 @@
-<div class="px-10 py-20 h-full">
-  <h3 class="text-gray-500 uppercase text-sm font-bold mb-2">
-    Ingresa a la plataforma
-  </h3>
-  <h1 class="text-5xl md:text-6xl text-center md:text-left text-black font-medium mb-2">
-    Inicia sesión<span class="text-primary">.</span>
-  </h1>
-  <span class="text-gray-500 font-medium">
-    ¿No eres usuario?
-    <a href="#" class="text-primary hover:underline">
-      Registrate
-    </a>
-  </span>
-  <form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="mt-8">
-    <div class="max-w-lg xl:max-w-[30rem] mb-4">
-      <input
-        type="email"
-        autoComplete="off"
-        class="w-full py-3 px-4 outline-none bg-whiten text-gray-100 group border-b-[1px] border-gray-300 focus:border-primary"
-        placeholder="Correo electrónico"
-        id="username"
-        formControlName="username"
-      />
-    </div>
-    <div class="max-w-lg xl:max-w-[30rem] mb-4">
-      <input
-        type="password"
-        autoComplete="off"
-        class="w-full py-3 px-4 outline-none bg-whiten text-gray-100 group border-b-[1px] border-gray-300 focus:border-primary"
-        placeholder="Contraseña"
-        id="password"
-        formControlName="password"
-      />
-    </div>
-    <div class="max-w-lg xl:max-w-[30rem] flex justify-center md:justify-end mb-6">
-      <a
-        href="#"
-        class="text-gray-500 font-medium hover:text-primary transition-colors"
-      >
-        ¿Olvidaste tu contraseña?
+<div class="px-10 py-20 h-full flex flex-col justify-center items-center">
+  <div class="bg-[#F2F5F6] h-[60vh] px-20 py-24">
+    <h3 class="text-gray-500 uppercase text-sm font-bold mb-2">
+      Ingresa a la plataforma
+    </h3>
+    <h1 class="text-5xl md:text-6xl text-center md:text-left text-black font-medium mb-8">
+      Inicia sesión<span class="text-primary">.</span>
+    </h1>
+    <!-- <span class="text-gray-500 font-medium">
+      ¿No eres usuario?
+      <a href="#" class="text-primary hover:underline">
+        Registrate
       </a>
-    </div>
-    <div class="max-w-lg xl:max-w-[30rem]">
-      <button class="bg-black text-white w-full py-3 px-4 rounded-xl hover:bg-graydark transition-colors">
-        Iniciar sesión
-      </button>
-    </div>
-  </form>
+    </span> -->
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="mt-8 min-w-10">
+      <div class="max-w-lg xl:min-w-[30rem]  mb-4">
+        <input
+          type="email"
+          autoComplete="off"
+          class="w-full py-3 px-4 outline-none bg-whiten text-gray-100 group border-b-[1px] border-gray-300 focus:border-primary"
+          placeholder="Correo electrónico"
+          id="username"
+          formControlName="username"
+        />
+      </div>
+      <div class="max-w-lg xl:max-w-[30rem] mb-4">
+        <input
+          type="password"
+          autoComplete="off"
+          class="w-full py-3 px-4 outline-none bg-whiten text-gray-100 group border-b-[1px] border-gray-300 focus:border-primary"
+          placeholder="Contraseña"
+          id="password"
+          formControlName="password"
+        />
+      </div>
+      <div class="max-w-lg xl:max-w-[30rem] flex justify-center md:justify-end my-8">
+        <a
+          href="#"
+          class="text-gray-500 font-medium hover:text-primary transition-colors"
+        >
+          ¿Olvidaste tu contraseña?
+        </a>
+      </div>
+      <div class="max-w-lg xl:max-w-[30rem]">
+        <button class="bg-black text-white w-full py-3 px-4 rounded-xl hover:bg-graydark transition-colors">
+          Iniciar sesión
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
